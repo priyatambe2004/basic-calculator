@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <h1>Basic Calculator</h1>
+        <p class="hint">Use the buttons or your keyboard.</p>
+      </div>
+    </header>
+
+    <div class="layout">
+   
+      <section class="calc" aria-label="Calculator">
+        <div class="screen" aria-live="polite">
+          <p id="expression" class="expression"></p>
+          <p id="display" class="display">0</p>
+        </div>
+
+        <div class="keys" id="keys">
+          <button class="key util" data-action="clear">C</button>
+          <button class="key util" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key util" data-action="percent">%</button>
+          <button class="key op" data-operator="/" aria-label="Divide">÷</button>
+
+          <button class="key" data-number="7">7</button>
+          <button class="key" data-number="8">8</button>
+          <button class="key" data-number="9">9</button>
+          <button class="key op" data-operator="*" aria-label="Multiply">×</button>
+
+          <button class="key" data-number="4">4</button>
+          <button class="key" data-number="5">5</button>
+          <button class="key" data-number="6">6</button>
+          <button class="key op" data-operator="-" aria-label="Subtract">−</button>
+
+          <button class="key" data-number="1">1</button>
+          <button class="key" data-number="2">2</button>
+          <button class="key" data-number="3">3</button>
+          <button class="key op" data-operator="+" aria-label="Add">+</button>
+
+          <button class="key" data-action="negate" aria-label="Plus or minus">±</button>
+          <button class="key" data-number="0">0</button>
+          <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
+          <button class="key equals" data-action="equals">=</button>
+        </div>
+      </section>
+
+      <aside class="history">
+        <div class="history-head">
+          <h2>History</h2>
+          <button type="button" id="clear-history" class="link-btn">Clear</button>
+        </div>
+        <ul id="history-list"></ul>
+        <p id="history-empty" class="muted">Your calculations will appear here.</p>
+        <p class="tip">Keyboard: <kbd>0-9</kbd> <kbd>+ - * /</kbd> <kbd>Enter</kbd> <kbd>Backspace</kbd> <kbd>Esc</kbd></p>
+      </aside>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
